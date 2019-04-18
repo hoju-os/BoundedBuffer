@@ -4,7 +4,7 @@ public class BoundedBufferTest {
 
         int size = 5;
 
-        BoundedBuffer buffer = new BoundedBufferSemaphore(size);
+        BoundedBuffer buffer = new BoundedBufferMonitor(size);
 
         Producer producer = new Producer(Integer.toString(1), buffer);
         Consumer consumer = new Consumer(Integer.toString(1), buffer);
